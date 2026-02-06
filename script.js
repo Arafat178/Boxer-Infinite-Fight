@@ -246,7 +246,7 @@ function gameLoop() {
         // এনিমি লজিক
         if (enemy_health <= 0 && !enemy_states.dead) {
             enemy_states.dead = true; enemy_states.lying = true;
-            let reward = is_boss_round ? 50 : 10;
+            let reward = is_boss_round ? 100 : 25;
             current_score += (reward + (combo_count * 2)); player_coins += reward;
             playSound('lying');
         }
@@ -294,5 +294,6 @@ function gameLoop() {
     }
     requestAnimationFrame(gameLoop);
 }
+
 
 requestAnimationFrame(gameLoop);
