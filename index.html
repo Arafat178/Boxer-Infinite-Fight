@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boxer: Infinite Fight - RPG Web Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>Boxer: Infinite Fight (Web RPG)</h1>
+
+    <canvas id="gameCanvas" width="900" height="600"></canvas>
+
+    <div id="shop-buttons">
+        <h2 style="color: gold;">UPGRADE SHOP</h2>
+        <p id="shop-coins" style="color: white;">Coins: 0</p>
+        <button class="btn btn-red" onclick="buyItem('damage')">1. Damage +5 ($10)</button><br><br>
+        <button class="btn btn-green" onclick="buyItem('health')">2. Max HP +20 ($20)</button><br><br>
+        <button class="btn btn-blue" onclick="buyItem('defense')">3. Defense +2 ($30)</button><br><br>
+        <button class="btn btn-gold" onclick="toggleShop()">Close Shop</button>
+    </div>
+
+    <div id="controls">
+        <div class="btn" onmousedown="setKey('left', true)" onmouseup="setKey('left', false)" ontouchstart="setKey('left', true)" ontouchend="setKey('left', false)">🛡️ Block</div>
+        <div class="btn" onmousedown="setKey('right', true)" onmouseup="setKey('right', false)" ontouchstart="setKey('right', true)" ontouchend="setKey('right', false)">➡️ Run</div>
+        <div class="btn btn-red" onclick="triggerPunch()">🥊 Punch</div>
+        <div class="btn btn-blue" onclick="triggerUltimate()">⚡ Ultimate</div>
+        <div class="btn btn-gold" onclick="toggleShop()">🛒 Shop</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
